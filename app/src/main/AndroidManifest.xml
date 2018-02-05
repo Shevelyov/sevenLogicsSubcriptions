@@ -39,6 +39,18 @@
             android:name=".AccountActivity"
             android:label="Home">
         </activity>
+        <activity
+            android:name=".RecipesActivity"
+            android:label="Recipes">
+        </activity>
+        <activity
+            android:name=".AddRecipeActivity"
+            android:label="AddRecipe">
+        </activity>
+        <activity
+            android:name=".RecipeDetailsActivity"
+            android:label="RecipeDetails">
+        </activity>
     </application>
 
 </manifest>

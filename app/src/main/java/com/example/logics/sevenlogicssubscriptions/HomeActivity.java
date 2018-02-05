@@ -23,5 +23,10 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickRecipes(View view){
+        Intent intent = new Intent(this, RecipesActivity.class);
+        startActivity(intent);
+    }
+
 
 }
