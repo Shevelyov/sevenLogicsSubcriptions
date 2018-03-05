@@ -4,7 +4,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.logics.sevenlogicssubscriptions.SignUpActivity"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:id="@+id/signUpLayout">
 
     <EditText
         android:id="@+id/firstName"
@@ -54,10 +55,15 @@
         android:inputType="textPassword"
         android:hint="Repeat Password" />
 
+    <TextView
+            android:text=" Choose subscription plan:"
+            android:textSize="19dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView5"/>
     <Spinner
-        android:id="@+id/subscriptionSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:id="@+id/subscriptionSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -69,7 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_column="2"
             android:layout_row="1"
-            android:text="Sign Up" />
+            android:text="Sign Up"
+            android:onClick="onSignUp"/>
 
         <Button
             android:id="@+id/button2"

@@ -28,5 +28,9 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickCalendar(View view){
+        Intent intent = new Intent(this, CalendarActivity.class);
+        startActivity(intent);
+    }
 
 }

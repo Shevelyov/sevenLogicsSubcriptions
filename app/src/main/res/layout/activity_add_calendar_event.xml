@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1">
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/addEventTitle"
+            android:hint="Title"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="Time"
+            android:text="00:00"
+            android:focusable="false"
+            android:id="@+id/addEventTime"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/addEventDescription"
+            android:hint="Description"/>
+    <CheckBox
+            android:text="Notify By Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/addEventNotifyByEmail"
+    />
+    <Button
+            android:text="Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/addEventSave"
+            android:onClick="onSave"/>
+</LinearLayout>
