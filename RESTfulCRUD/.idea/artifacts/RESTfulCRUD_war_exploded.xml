@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="RESTfulCRUD:war exploded">
+    <output-path>$PROJECT_DIR$/target/RESTfulCRUD</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="RESTfulCRUD" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: asm:asm:3.3.1" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-bundle:1.19.2" />
+          <element id="library" level="project" name="Maven: javax.ws.rs:jsr311-api:1.1.1" />
+          <element id="library" level="project" name="Maven: org.json:json:20160810" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-server:1.19.2" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.19.2" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.45" />
+          <element id="library" level="project" name="Maven: org.mindrot:jbcrypt:0.4" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:3.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.0.6.RELEASE" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/RESTfulCRUD/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="RESTfulCRUD/web/Web" />
+    </root>
+  </artifact>
+</component>

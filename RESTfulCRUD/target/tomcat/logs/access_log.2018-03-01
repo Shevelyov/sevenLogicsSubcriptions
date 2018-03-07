@@ -1,0 +1,7 @@
+127.0.0.1 - - [01/Mar/2018:15:39:56 -0800] "POST /RESTfulCRUD/rest/familyOrganizer/addUser HTTP/1.1" 200 176 http-bio-8080-exec-1 1212
+127.0.0.1 - - [01/Mar/2018:15:46:30 -0800] "POST /RESTfulCRUD/rest/familyOrganizer/checkValidUser HTTP/1.1" 200 17 http-bio-8080-exec-1 728
+127.0.0.1 - - [01/Mar/2018:15:47:27 -0800] "POST /RESTfulCRUD/rest/familyOrganizer/checkValidUser HTTP/1.1" 200 17 http-bio-8080-exec-1 936
+127.0.0.1 - - [01/Mar/2018:15:57:25 -0800] "POST /RESTfulCRUD/rest/familyOrganizer/checkValidUser HTTP/1.1" 200 17 http-bio-8080-exec-1 1214
+127.0.0.1 - - [01/Mar/2018:16:41:34 -0800] "POST /RESTfulCRUD/rest/familyOrganizer/addUser HTTP/1.1" 200 177 http-bio-8080-exec-1 964
+127.0.0.1 - - [01/Mar/2018:16:42:59 -0800] "POST /RESTfulCRUD/rest/familyOrganizer/checkValidUser HTTP/1.1" 200 15 http-bio-8080-exec-3 99
+127.0.0.1 - - [01/Mar/2018:16:43:38 -0800] "POST /RESTfulCRUD/rest/familyOrganizer/checkValidUser HTTP/1.1" 200 17 http-bio-8080-exec-5 100
