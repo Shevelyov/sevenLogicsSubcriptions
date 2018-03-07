@@ -1,0 +1,356 @@
+@CHARSET "ISO-8859-1";
+/*
+* multi-line comment
+*/
+
+p {
+  line-height: 1em;
+}
+
+h1, h2, h3, h4 {
+  color: White;
+  font-weight: normal;
+  line-height: 1.1em;
+  margin: 0 0 .5em 0;
+}
+
+h2 {
+  color: white font-size: 2em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+body {
+  font-family: arial;
+  line-height: 1.2em;
+  width: 100%;
+  margin: 0;
+  /* background-image: url("images/back.jpg");*/
+  background: #4db8ff;
+  background-size: 1200px, 1200px;
+  display: inline-block;
+  background-size: 1200px, 1200px;
+}
+
+/* you can put your code all in one line like above */
+
+#page {
+  margin: 20px;
+}
+
+#navigationbar {
+  background-color: #4db8ff;
+}
+
+#logo {
+  width: Auto;
+  padding-top: 12px;
+  font-family: georgia;
+  display: inline-block;
+}
+
+#nav {
+  width: Auto;
+  display: inline-block;
+  text-align: right;
+  margin-top: 25px;
+  float: right;
+}
+
+.navbar-default {
+  background: #4db8ff;
+  border-color: #4db8ff;
+}
+
+.navbar-default .navbar-form ul li a {
+  background: #4db8ff;
+  color: white;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  background-color: blue;
+  box-shadow: 0px 1px 1px #666;
+}
+
+.navbar-form ul li a:active {
+  background-color: blue;
+}
+
+#logoimage {
+  width: 35px;
+  height: 35px;
+  align: left;
+  display: inline-block;
+}
+
+#content {
+  margin: 20px;
+  display: inline-block;
+}
+
+#textContent {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+#image {
+  align: left;
+  display: inline-block;
+  float: left;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.loginBtn {
+  background-color: #4CAF50;
+  background-image: linear-gradient(to bottom, #4CAF50 0%, #4CAF50 100%);
+  color: white;
+  background-position: 0;
+}
+
+.loginBtn:hover {
+  opacity: 0.8;
+  background-position: 0;
+}
+
+#login-modal .img-circle{
+  width: 313px;
+  height: 148px;
+}
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Add Zoom Animation */
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@ -webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@ keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+#recimg {
+  height: 200px;
+  width: 200px;
+  align: left;
+  display: inline-block;
+  float: left;
+}
+
+#recContent {
+  display: inline-block;
+  margin-left: 80px;
+}
+
+#calContent {
+  padding-right: 80px;
+  padding-left: 80px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#buttn {
+  margin-left: 700px;
+  margin-top: 100px;
+}
+
+#journalimg {
+  height: 200px;
+  width: 200px;
+  align: left;
+  display: inline-block;
+  float: left;
+}
+
+#JournalContent {
+  display: inline-block;
+  margin-left: 80px;
+  align: left;
+  display: inline-block;
+  float: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {
+    width: 13.1%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {
+    width: 12.5%;
+  }
+  .days li .active {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {
+    width: 12.2%;
+  }
+}
