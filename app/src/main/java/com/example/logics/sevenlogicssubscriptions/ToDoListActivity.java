@@ -7,9 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.*;
 import android.widget.*;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,15 +32,18 @@ public class ToDoListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_todo_list);
 
         mTaskListView = (ListView) findViewById(R.id.list_todo);
-        Button delete = (Button) findViewById(R.id.task_delete);
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                View parent = (View) v.getParent();
-                TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
-                String task = String.valueOf(taskTextView.getText());
-            }
-        });
+//        LayoutInflater layoutInflater = getLayoutInflater();
+//        View list_item_view = layoutInflater.inflate(R.layout.activity_listview, null);
+//        View view = layoutInflater.inflate(R.layout.item_todo, (ViewGroup)list_item_view , true);
+//        Button delete = (Button) view.findViewById(R.id.task_delete);
+//        delete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                View parent = (View) v.getParent();
+//                TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
+//                String task = String.valueOf(taskTextView.getText());
+//            }
+//        });
         new ToDoListGetAsync().execute();
     }
 
@@ -62,12 +63,12 @@ public class ToDoListActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void onDeleteTask(View view){
-        View parent = (View) view.getParent();
-        TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
-        String task = String.valueOf(taskTextView.getText());
-
-    }
+//    public void onDeleteTask(View view){
+//        View parent = (View) view.getParent();
+//        TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
+//        String task = String.valueOf(taskTextView.getText());
+//
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
