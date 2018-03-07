@@ -53,7 +53,7 @@ public class SignUpActivity extends AppCompatActivity {
         subscriptionSpinner = (Spinner) findViewById(R.id.subscriptionSpinner);
 
         //execute background task to fill the spinner from DB
-        new GetSubscriptionsAsyncTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        new GetSubscriptionsAsyncTask().executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
 
         subscriptionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -132,7 +132,7 @@ public class SignUpActivity extends AppCompatActivity {
         postData.put("familyName", lastNameField.getText().toString());
         postData.put("emailID", emailField.getText().toString());
         postData.put("subscriptionType", subscriptionId);
-        new SignUpUserAsyncTask(postData).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        new SignUpUserAsyncTask(postData).executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
     }
 
     private class GetSubscriptionsAsyncTask extends AsyncTask<String, Void, String> {

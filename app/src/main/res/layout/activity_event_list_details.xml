@@ -25,5 +25,6 @@
     <CheckBox
             android:text="Notify By Email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/eventNotify"/>
+            android:layout_height="wrap_content" android:id="@+id/eventNotify"
+            android:enabled="false"/>
 </LinearLayout>
