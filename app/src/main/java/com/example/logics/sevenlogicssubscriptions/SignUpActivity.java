@@ -132,13 +132,7 @@ public class SignUpActivity extends AppCompatActivity {
         postData.put("familyName", lastNameField.getText().toString());
         postData.put("emailID", emailField.getText().toString());
         postData.put("subscriptionType", subscriptionId);
-        postData.put("subscriptionPaymentType", "credit");
         new SignUpUserAsyncTask(postData).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-    }
-
-    public static String convertStreamToString(java.io.InputStream is) {
-        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-        return s.hasNext() ? s.next() : "";
     }
 
     private class GetSubscriptionsAsyncTask extends AsyncTask<String, Void, String> {
@@ -218,7 +212,7 @@ public class SignUpActivity extends AppCompatActivity {
                 int statusCode = connection.getResponseCode();
                 if (statusCode ==  200) {
                     InputStream inputStream = new BufferedInputStream(connection.getInputStream());
-                    return convertStreamToString(inputStream);
+                    return HelperUtils.convertStreamToString(inputStream);
                 }
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -237,9 +231,7 @@ public class SignUpActivity extends AppCompatActivity {
             else{
                 resultMsg = Snackbar.make(findViewById(R.id.signUpLayout), FAIL_MESSAGE, Snackbar.LENGTH_SHORT);
             }
-            System.out.println("Before showing msg");
             resultMsg.show();
-            System.out.println("After showing msg");
         }
     }
 }

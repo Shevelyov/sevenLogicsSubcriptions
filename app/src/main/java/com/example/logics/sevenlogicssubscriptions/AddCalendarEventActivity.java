@@ -11,6 +11,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import org.json.JSONObject;
@@ -110,13 +111,23 @@ public class AddCalendarEventActivity extends AppCompatActivity {
         postData.put("desc", descriptionField.getText().toString());
         postData.put("notifyByEmail", notifyByEmailField.isChecked() ? "true" : "false");
         postData.put("eventUserSelectedDate", getTime());
-        postData.put("username", String.valueOf(1));
+        postData.put("userID", getSharedPreferences("Login", 0).getString("UserID", null));
         new HttpPostAsyncTask(postData).execute();
     }
 
-    static String convertStreamToString(java.io.InputStream is) {
-        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-        return s.hasNext() ? s.next() : "";
+    private void clearUI(){
+        View view = getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+        titleField.setText("");
+        descriptionField.setText("");
+        titleField.clearFocus();
+        descriptionField.clearFocus();
+        timeField.clearFocus();
+        notifyByEmailField.clearFocus();
+        notifyByEmailField.setChecked(false);
     }
 
     private class HttpPostAsyncTask extends AsyncTask<String, Void, String>{
@@ -130,6 +141,7 @@ public class AddCalendarEventActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
+            String result = "";
             try{
                 URL url = new URL("http://10.0.2.2:8080/RESTfulCRUD/rest/familyOrganizer/addEvent");
                 HttpURLConnection connection = (HttpURLConnection)url.openConnection();
@@ -148,20 +160,21 @@ public class AddCalendarEventActivity extends AppCompatActivity {
                 int statusCode = connection.getResponseCode();
                 if (statusCode ==  200) {
                     InputStream inputStream = new BufferedInputStream(connection.getInputStream());
-                    return convertStreamToString(inputStream);
+                    result = HelperUtils.convertStreamToString(inputStream);
                 }
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return null;
+            return result;
         }
 
         @Override
         protected void onPostExecute(String response) {
             Snackbar resultMsg;
             if(response != null && response.equals("success")){
+                clearUI();
                 resultMsg = Snackbar.make(findViewById(R.id.addEventTitle), SUCCESS_MESSAGE, Snackbar.LENGTH_SHORT);
             }
             else{

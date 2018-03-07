@@ -23,8 +23,8 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickRecipes(View view){
-        Intent intent = new Intent(this, RecipesActivity.class);
+    public void onClickToDo(View view){
+        Intent intent = new Intent(this, ToDoListActivity.class);
         startActivity(intent);
     }
 

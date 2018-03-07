@@ -7,9 +7,16 @@
     <CalendarView
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/calendarView" android:layout_weight="0.97"/>
+
+    <Button
+            android:text="Show Events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/showEventsButton"
+            android:onClick="onClickShowEvents"/>
+
     <Button
             android:text="Add Event"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/button23"
+            android:layout_height="wrap_content" android:id="@+id/addNewEventButton"
             android:onClick="onClickAddEvent"/>
 </LinearLayout>

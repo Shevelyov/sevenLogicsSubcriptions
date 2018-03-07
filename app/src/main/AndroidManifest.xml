@@ -61,6 +61,18 @@
                 android:name=".AddCalendarEventActivity"
                 android:label="AddCalendarEventActivity">
         </activity>
+        <activity
+                android:name=".ShowEventsActivity"
+                android:label="ShowEventsActivity">
+        </activity>
+        <activity
+                android:name=".ToDoListActivity"
+                android:label="ToDoListActivity">
+        </activity>
+        <activity
+                android:name=".EventDetailsActivity"
+                android:label="EventDetailsActivity">
+        </activity>
     </application>
 
 </manifest>

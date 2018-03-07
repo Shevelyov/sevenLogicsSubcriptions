@@ -39,4 +39,10 @@ public class CalendarActivity extends AppCompatActivity {
         intent.putExtra("date", date);
         startActivity(intent);
     }
+
+    public void onClickShowEvents(View view){
+        Intent intent = new Intent(this, ShowEventsActivity.class);
+        intent.putExtra("date", date);
+        startActivity(intent);
+    }
 }
